@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Models
+namespace Models.Subject
 {
-    class An_studiu
+    public enum EvaluationType
     {
-        public int an;
-        public string[] discipline;
+        Distributed,
+        Exam
     }
 }
