@@ -1,0 +1,67 @@
+﻿@model Sample_MVCApp.Models.Student
+
+@{
+    ViewBag.Title = "StudentAdd";
+}
+
+<h2>UserAdd</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>UserModels</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Nume)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Nume)
+            @Html.ValidationMessageFor(model => model.Nume)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Prenume)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Prenume)
+            @Html.ValidationMessageFor(model => model.Prenume)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Medie)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Medie)
+            @Html.ValidationMessageFor(model => model.Medie)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Numar)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Numar)
+            @Html.ValidationMessageFor(model => model.Numar)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Disciplina)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Disciplina)
+            @Html.ValidationMessageFor(model => model.Disciplina)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

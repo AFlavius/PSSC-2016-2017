@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Sample_MVCApp.Models.Student>
+
+@{
+    ViewBag.Title = "Studenti";
+}
+
+<h2>Studenti</h2>
+
+
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nume)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Prenume)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Numar)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Disciplina)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Medie)
+        </th>
+        
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nume)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Prenume)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Numar)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Disciplina)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Medie)
+        </td>
+        
+      
+    </tr>
+}
+
+</table>
